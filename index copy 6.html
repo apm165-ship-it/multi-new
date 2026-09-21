@@ -16,16 +16,115 @@
 ppet (provided below) and paste into the <body> section below this line.-->
 
 
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="style.css">
 
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 <style>
+
+/* ===== YELLOW BACKGROUND ===== */
+
+body {
+  background-color: #fff59d;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ===== MAIN TEXT ===== */
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+.text-block {
+  text-align: center !important;
+  margin: 20px auto 40px auto;
+}
+
+.text-block p {
+  text-align: center;
+  font-size: 24px;
+}
+
+
+/* ===== MOVING RAINBOW ===== */
+
+.rainbow-marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 30px 0;
+}
+
+.rainbow {
+  display: inline-block;
+  font-size: 70px;
+  animation: moveRainbow 6s linear infinite;
+}
+
+/* Moves rainbow from left to right */
+
+@keyframes moveRainbow {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+
+/* ===== VIDEO ===== */
+
+.video {
+  text-align: center;
+  margin: 30px auto 50px auto;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+}
+
+.video iframe {
+  max-width: 90%;
+}
+
+.video p {
+  text-align: center;
+  font-size: 18px;
+}
+
+
+/* ===== IMAGES ===== */
+
+.frame {
+  display: block;
+  margin: 20px auto 10px auto;
+  max-width: 50%;
+  height: auto;
+}
+
+body > p {
+  text-align: center;
+  font-size: 18px;
+}
+
+
+/* ===== CHOICE BUTTON ===== */
 
 .choice-container {
   display: flex;
@@ -40,7 +139,7 @@ ppet (provided below) and paste into the <body> section below this line.-->
   justify-content: center;
   align-items: center;
   width: 280px;
-  height: 120px;
+  height: 100px;
   border: 2px solid black;
   background-color: white;
   color: black;
@@ -59,8 +158,23 @@ ppet (provided below) and paste into the <body> section below this line.-->
   cursor: pointer;
 }
 
-/* Makes the boxes stack on phones */
+
+/* ===== MOBILE VERSION ===== */
+
 @media screen and (max-width: 700px) {
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .text-block p {
+    font-size: 20px;
+  }
+
+  .frame {
+    max-width: 80%;
+  }
+
   .choice-container {
     flex-direction: column;
     align-items: center;
@@ -69,6 +183,7 @@ ppet (provided below) and paste into the <body> section below this line.-->
   .choice-button {
     width: 80%;
   }
+
 }
 
 </style>
@@ -79,60 +194,101 @@ ppet (provided below) and paste into the <body> section below this line.-->
 <body>
 
 
-      <h1>You Made It!! </h1>
-  </div>
+<!-- ===== TITLE ===== -->
+
+<h1>You Made It!!</h1>
+
+
+<!-- ===== INTRO TEXT ===== -->
+
+<div class="text-block">
+  <p>
+    Welcome to all things good! Look around. Wasn't it worth it??
+  </p>
 </div>
 
 
-<div class="text-block" style="text-align: left">
-    <p>Welcome to all things good! Look around. Wasn't it worth it??</p>
+<!-- ===== MOVING RAINBOW ===== -->
+
+<div class="rainbow-marquee">
+  <span class="rainbow">🌈</span>
 </div>
 
-  <div class="video">
+
+<!-- ===== VIDEO ===== -->
+
+<div class="video">
+
   <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/awhyiBv-oQc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/awhyiBv-oQc" 
+      title="The Muppets Rainbow Connection Sing-Along" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+
   </div>
-       <p><i>The Muppets Rainbow Connection Sing-Along</i></p>
+
+  <p>
+    <i>The Muppets Rainbow Connection Sing-Along</i>
+  </p>
+
 </div>
-  <img class="frame" src="giftcard.jpg" width="50%" alt="giftcard.jpg">
-     <p><i>Remembering you have a gift card</i></p>
-    </div>
-<div class="hero-image">
-  
-  </div>
-  <img class="frame" src="rain.jpg" width="50%" alt="rain.jpg">
-     <p><i>Rain on a slow fall Sunday morning</i></p>
-    </div>
 
-</div>
-  <img class="frame" src="tshirt.jpg" width="50%" alt="tshirt.jpg">
-     <p><i>Catching a free tshirt at a sporting event</i></p>
-    </div>
 
-  </div>
-  <img class="frame" src="maps.jpg" width="50%" alt="maps.jpg">
-     <p><i>Arriving somewhere before the Maps predicted time</i></p>
-    </div>
-<div class="hero-image">
-  
-<div class="hero-image">
+<!-- ===== GIFT CARD ===== -->
 
-    <div class="hero-text">
-    </div>
+<img class="frame" src="giftcard.jpg" width="50%" alt="Gift card">
 
+<p>
+  <i>Remembering you have a gift card</i>
+</p>
+
+
+<!-- ===== RAIN ===== -->
+
+<img class="frame" src="rain.jpg" width="50%" alt="Rain">
+
+<p>
+  <i>Rain on a slow fall Sunday morning</i>
+</p>
+
+
+<!-- ===== T-SHIRT ===== -->
+
+<img class="frame" src="tshirt.jpg" width="50%" alt="T-shirt">
+
+<p>
+  <i>Catching a free T-shirt at a sporting event</i>
+</p>
+
+
+<!-- ===== MAPS ===== -->
+
+<img class="frame" src="maps.jpg" width="50%" alt="Maps">
+
+<p>
+  <i>Arriving somewhere before the Maps predicted time</i>
+</p>
+
+
+<!-- ===== START OVER BUTTON ===== -->
 
 <div class="choice-container">
 
-    <a href="index.html" class="choice-button">
-        Start Over
-    </a>
+  <a href="index.html" class="choice-button">
+    Start Over
+  </a>
 
 </div>
 
 
-
-  </body>
-     </html>
+</body>
+</html>
 
 
 
