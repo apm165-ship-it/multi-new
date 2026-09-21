@@ -21,15 +21,68 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="style.css">
-<!--We've added Google Fonts to The Webtext Generator. Go to https://www.w3schools.com/howto/howto_google_fonts.asp to find fonts and add them to this stylesheet link and to the html selector on style.css-->
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-</head>
 
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+<style>
+
+/* ===== CLICKABLE CHOICE BOXES ===== */
+
+.choice-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.choice-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 120px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* What happens when you hover over a button */
+.choice-button:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Makes the boxes stack on phones */
+@media screen and (max-width: 700px) {
+  .choice-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .choice-button {
+    width: 80%;
+  }
+}
+
+</style>
+
+</head>
 
 
 <body>
 
-<!--To adjust hero image and text, find hero-image class on style.css-->
+
+<!-- HERO IMAGE -->
+
 <div class="hero-image">
   <div class="hero-text">
       <h1>The Door</h1>
@@ -37,54 +90,30 @@
   </div>
 </div>
 
-<!--To build your webtext, copy the code snippet (provided below) and paste into the <body> section below this line.-->
 
+<!-- STORY -->
 
 <div class="text-block" style="text-align: left">
-    <p>There is nothing behind this door. Do not open it. It leads to nothing</a>.</p>
+    <p>There is nothing behind this door. Do not open it. It leads to nothing.</p>
 </div>
+
+
+<!-- CLICKABLE CHOICES -->
 
 <div class="choice-container">
 
     <a href="index copy.html" class="choice-button">
-        <span>OPEN THE DOOR</span>
+        OPEN THE DOOR
     </a>
 
     <a href="index copy3.html" class="choice-button">
-        <span>STAY CONTENT</span>
+        STAY CONTENT
     </a>
 
 </div>
 
-  .choice-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-}
 
-.choice-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 100px;
-    border: 2px solid black;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.choice-button:hover {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-}
-
-  
+<!-- FOOTER -->
 
 <div class="logo">
   <img src="fuego.jpg" alt="Pitt Fuego Flame" width="25%">
@@ -92,8 +121,9 @@
   <p><em>Why make a spark when you can light a fire?</em></p>
 </div>
 
-  </body>
-     </html>
+
+</body>
+</html>
 
 
 
